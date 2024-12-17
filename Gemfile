@@ -55,3 +55,5 @@ group :development do
 
   gem "simplecov", require: false
 end
+
+gem "tailwindcss-rails", "~> 3.0"
