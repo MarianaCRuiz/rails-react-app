@@ -14,4 +14,11 @@ Rails.application.routes.draw do
 
   get "homepage/index"
   get "/*path" => "homepage#index"
+
+  namespace :api do
+    namespace :v1 do
+      get 'courses', to: 'courses#index'
+      get 'about', to: 'pages#about'
+    end
+  end
 end
