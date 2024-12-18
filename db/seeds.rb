@@ -7,3 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+Course.create!(registration_code: 'cs11', name: 'Introdução a processos', description: 'inicio do curso')
+Course.create!(registration_code: 'cs12', name: 'Desenvolvimento e pesquisa', description: 'segundo modulo do curso')
