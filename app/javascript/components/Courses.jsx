@@ -17,18 +17,25 @@ export default function Courses() {
       .then((res) => setCourses(res))
       .catch(() => navigate("/"));
   }, []);
-console.log(courses)
+
   return(
     <div>
       <h1>Cursos</h1>
-      {courses.map((course) => 
-        <React.Fragment key={`course_${course.id}`}>
-          <p>{course.name}</p>
-          <p>{course.registration_code}</p>
-          <p>{course.description}</p>
-          <br></br>
-        </React.Fragment>
-      )}
+      <div className="grid grid-cols-3 gap-4">
+        {courses.map((course) => 
+          <div className="card mb-3"key={`course_${course.id}`}>
+            <div className="row g-0">
+              <div className="col-md-8">
+                <div className="card-body">
+                  <h5 className="card-title">{course.name}</h5>
+                  <p className="card-text">{course.description}</p>
+                  <p className="card-text"><small className="text-body-secondary">{course.registration_code}</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   )
 };
