@@ -20,22 +20,28 @@ export default function Courses() {
 
   return(
     <div>
-      <h1>Cursos</h1>
-      <div className="grid grid-cols-3 gap-4">
-        {courses.map((course) => 
-          <div className="card mb-3"key={`course_${course.id}`}>
-            <div className="row g-0">
-              <div className="col-md-8">
-                <div className="card-body">
-                  <h2 className="card-title">{course.name}</h2>
-                  <p className="card-text">{course.description}</p>
-                  <p className="card-text"><small className="text-body-secondary">{course.registration_code}</small></p>
+      {courses.length > 0 && (
+        <>
+          <h1>Cursos</h1>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            {courses.map((course) =>
+              <div class="col">
+                <div className="card mb-3"key={`course_${course.id}`}>
+                  <div className="row g-0">
+                    <div className="col-md-8">
+                      <div className="card-body">
+                        <h5 className="card-title">{course.name}</h5>
+                        <p className="card-text">{course.description}</p>
+                        <p className="card-text"><small className="text-body-secondary">{course.registration_code}</small></p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
-        )}
-      </div>
+        </>
+      )}
     </div>
   )
 };
