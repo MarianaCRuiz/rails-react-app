@@ -100,7 +100,7 @@ RSpec.describe "Courses", type: :request do
           }
         }
         expect(response).to have_http_status(422)
-        expect(parsed_body).to eq(["Registration code can't be blank"])
+        expect(parsed_body).to eq([ "Registration code can't be blank" ])
       end
     end
   end
