@@ -27,7 +27,7 @@ export default function Courses() {
             <div className="row g-0">
               <div className="col-md-8">
                 <div className="card-body">
-                  <h5 className="card-title">{course.name}</h5>
+                  <h2 className="card-title">{course.name}</h2>
                   <p className="card-text">{course.description}</p>
                   <p className="card-text"><small className="text-body-secondary">{course.registration_code}</small></p>
                 </div>
